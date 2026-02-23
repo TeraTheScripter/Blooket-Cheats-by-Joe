@@ -3,64 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blooket Cheats</title>
+    <title>Blooket Cheat Interface</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
         .container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .side-panel {
-            width: 250px;
-            background-color: #f2f2f2;
+            max-width: 600px;
+            margin: auto;
+            background: white;
             padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            display: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .toggle-button {
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
+        h1 {
+            text-align: center;
+        }
+        .toggle {
+            margin: 10px 0;
             padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
             border: none;
             border-radius: 5px;
         }
-        .game-code-input {
-            margin: 20px;
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cheat-button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #28A745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <button class="toggle-button" onclick="toggleSidePanel()">Toggle Side Panel</button>
-    </header>
     <div class="container">
-        <div class="side-panel" id="sidePanel">
-            <h2>Cheats Panel</h2>
-            <p>Here you can find various cheats for Blooket games.</p>
-        </div>
-        <main>
-            <h1>Blooket Cheats Website</h1>
-            <div class="game-code-input">
-                <label for="gameCode">Enter Game Code:</label>
-                <input type="text" id="gameCode" placeholder="Game Code">
-                <button onclick="submitCode()">Submit</button>
-            </div>
-        </main>
+        <h1>Blooket Cheat Interface</h1>
+        <button class="toggle" onclick="toggleMenu()">Toggle Menu</button>
+        <input type="text" class="input-field" id="gameCode" placeholder="Enter Blooket Game Code">
+        <button class="cheat-button" onclick="integrateCheat()">Activate Cheat</button>
     </div>
+
     <script>
-        function toggleSidePanel() {
-            const panel = document.getElementById('sidePanel');
-            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        function toggleMenu() {
+            alert('Menu toggled!'); // Placeholder for menu functionality
         }
-        function submitCode() {
-            const code = document.getElementById('gameCode').value;
-            alert('Game code submitted: ' + code);
-            // Place logic to handle the game code submission here
+        function integrateCheat() {
+            const gameCode = document.getElementById('gameCode').value;
+            alert('Cheat activated for game code: ' + gameCode); // Placeholder for cheat functionality
         }
     </script>
 </body>
