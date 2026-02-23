@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooket Cheats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .side-panel {
+            width: 250px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .toggle-button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .game-code-input {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="toggle-button" onclick="toggleSidePanel()">Toggle Side Panel</button>
+    </header>
+    <div class="container">
+        <div class="side-panel" id="sidePanel">
+            <h2>Cheats Panel</h2>
+            <p>Here you can find various cheats for Blooket games.</p>
+        </div>
+        <main>
+            <h1>Blooket Cheats Website</h1>
+            <div class="game-code-input">
+                <label for="gameCode">Enter Game Code:</label>
+                <input type="text" id="gameCode" placeholder="Game Code">
+                <button onclick="submitCode()">Submit</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        function toggleSidePanel() {
+            const panel = document.getElementById('sidePanel');
+            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        }
+        function submitCode() {
+            const code = document.getElementById('gameCode').value;
+            alert('Game code submitted: ' + code);
+            // Place logic to handle the game code submission here
+        }
+    </script>
+</body>
+</html>
